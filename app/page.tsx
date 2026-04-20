@@ -15,11 +15,11 @@ export default function Home() {
       {/* Navigation */}
       <nav className="fixed top-0 left-0 right-0 z-50 bg-[#050510]/80 backdrop-blur-md border-b border-cyan-900/30">
         <div className="max-w-6xl mx-auto px-6 h-16 flex items-center justify-between">
-          <Link 
-            href="/" 
+          <Link
+            href="/"
             className="text-lg font-bold tracking-widest text-transparent bg-clip-text bg-gradient-to-r from-cyan-400 to-fuchsia-400 hover:to-cyan-400 transition-all duration-300"
           >
-            GITFOLIO
+            Shusei Yokoi
           </Link>
           <div className="flex gap-8 text-xs font-bold tracking-widest uppercase text-cyan-700/80">
             <Link href="#work" className="hover:text-cyan-400 hover:drop-shadow-[0_0_5px_rgba(34,211,238,0.8)] transition-all">PROJECTS</Link>
@@ -29,8 +29,8 @@ export default function Home() {
         </div>
       </nav>
 
-      <main className="relative z-10 max-w-6xl mx-auto px-6 pt-32 pb-20">
-        {/* Hero Section */}
+      <main className="relative z-10 max-w-6xl mx-auto px-6 pt-16 pb-20">
+        {/* Hero Section
         <section className="py-20 md:py-32 space-y-8 relative">
           <div className="space-y-2">
             <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full border border-cyan-500/30 bg-cyan-950/20 text-cyan-400 text-xs font-bold tracking-widest uppercase animate-pulse">
@@ -47,8 +47,8 @@ export default function Home() {
             A beginner-friendly portfolio template that showcases your projects beautifully. Fork it, customize it, deploy it—no design skills required.
           </p>
           <div className="pt-8 flex gap-6">
-            <Link 
-              href="#work" 
+            <Link
+              href="#work"
               className="group relative px-8 py-3 bg-cyan-950/30 border border-cyan-500/50 text-cyan-300 font-bold tracking-widest uppercase text-sm overflow-hidden hover:bg-cyan-900/50 transition-all hover:shadow-[0_0_20px_rgba(34,211,238,0.4)]"
             >
               <span className="relative z-10 flex items-center gap-2">
@@ -57,20 +57,20 @@ export default function Home() {
               <div className="absolute inset-0 bg-gradient-to-r from-transparent via-cyan-400/10 to-transparent -translate-x-full group-hover:animate-shimmer" />
             </Link>
           </div>
-        </section>
+        </section> */}
 
         {/* Selected Work */}
         <section id="work" className="py-20 space-y-12">
           <div className="flex items-end justify-between border-b border-cyan-900/30 pb-4">
             <h2 className="text-2xl font-bold tracking-widest text-fuchsia-400 drop-shadow-[0_0_8px_rgba(232,121,249,0.6)]">
-              // YOUR_PROJECTS
+              PROJECTS
             </h2>
             <span className="text-xs font-mono text-cyan-700">Showcase what you&apos;ve built with style</span>
           </div>
 
           <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
             {/* Project 1 */}
-            <ProjectCard 
+            <ProjectCard
               title="PROJECT_ONE"
               description="Your first amazing project goes here. Describe what problem it solves and the tech you used to build it."
               tags={["REACT", "NEXTJS", "TAILWIND"]}
@@ -78,7 +78,7 @@ export default function Home() {
               href="#"
             />
             {/* Project 2 */}
-            <ProjectCard 
+            <ProjectCard
               title="PROJECT_TWO"
               description="Your second project showcase. Tell visitors what makes this project special and what you learned building it."
               tags={["JAVASCRIPT", "API", "CSS"]}
@@ -86,7 +86,7 @@ export default function Home() {
               href="#"
             />
             {/* Project 3 */}
-            <ProjectCard 
+            <ProjectCard
               title="PROJECT_THREE"
               description="Another project to highlight your skills. Share the impact or results of this work."
               tags={["TYPESCRIPT", "NODE", "EXPRESS"]}
@@ -94,7 +94,7 @@ export default function Home() {
               href="#"
             />
             {/* Project 4 */}
-            <ProjectCard 
+            <ProjectCard
               title="PROJECT_FOUR"
               description="Keep building and adding to your portfolio. Each project tells part of your developer story."
               tags={["PYTHON", "DJANGO", "POSTGRESQL"]}
@@ -110,14 +110,14 @@ export default function Home() {
             <h2 className="text-2xl font-bold tracking-widest text-cyan-400 drop-shadow-[0_0_8px_rgba(34,211,238,0.6)]">
               {"// ABOUT_ME"}
             </h2>
-            
+
             {/* Profile Image - Replace src with your image in /public */}
             <div className="relative w-full aspect-[4/5] border border-cyan-500/30 rounded-sm overflow-hidden bg-cyan-950/30 group">
               <div className="absolute inset-0 bg-[linear-gradient(to_bottom,transparent_0%,rgba(5,5,16,0.8)_100%)] z-10" />
               {/* Scanline effect */}
               <div className="absolute inset-0 bg-[linear-gradient(to_bottom,rgba(34,211,238,0.05)_1px,transparent_1px)] bg-[size:100%_4px] z-20 pointer-events-none" />
-              
-              <Image 
+
+              <Image
                 src={`${basePath}/me.png`}
                 alt="Profile"
                 fill
@@ -163,8 +163,8 @@ export default function Home() {
               Fork this template on GitHub and make it yours. Update the content, add your projects, and deploy to GitHub Pages in under 30 minutes.
             </p>
             <div className="flex flex-col items-center gap-6">
-              <a 
-                href="https://github.com/ladykerr/gfbs3-portfolio-demo" 
+              <a
+                href="https://github.com/ladykerr/gfbs3-portfolio-demo"
                 className="px-10 py-4 bg-fuchsia-600 text-white font-bold tracking-widest uppercase text-sm hover:bg-fuchsia-500 transition-all hover:shadow-[0_0_30px_rgba(232,121,249,0.6)] hover:scale-105 duration-300 clip-path-polygon"
               >
                 FORK ON GITHUB
@@ -189,7 +189,7 @@ export default function Home() {
 function ProjectCard({ title, description, tags, color, href }: { title: string, description: string, tags: string[], color: "cyan" | "fuchsia" | "purple" | "yellow", href: string }) {
   // Valid color options for the card styling
   const validColors = ["cyan", "fuchsia", "purple", "yellow"] as const;
-  
+
   // Runtime validation: default to "cyan" if an invalid color is provided
   const safeColor = validColors.includes(color) ? color : "cyan";
 
@@ -231,9 +231,9 @@ function ProjectCard({ title, description, tags, color, href }: { title: string,
 
 function SocialLink({ href, label }: { href: string, label: string }) {
   return (
-    <a 
-      href={href} 
-      target="_blank" 
+    <a
+      href={href}
+      target="_blank"
       rel="noopener noreferrer"
       className="text-xs font-bold tracking-widest text-cyan-700 hover:text-cyan-400 hover:drop-shadow-[0_0_5px_rgba(34,211,238,0.8)] transition-all"
     >
